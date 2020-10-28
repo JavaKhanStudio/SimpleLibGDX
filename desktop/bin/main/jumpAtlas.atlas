@@ -1,0 +1,117 @@
+jumpAtlas.png
+size: 2360, 2360
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Pouki_An_Jump_v02
+  rotate: false
+  xy: 1455, 606
+  size: 459, 605
+  orig: 623, 620
+  offset: 90, 0
+  index: 1
+Pouki_An_Jump_v02
+  rotate: false
+  xy: 518, 602
+  size: 479, 607
+  orig: 623, 620
+  offset: 102, 0
+  index: 2
+Pouki_An_Jump_v02
+  rotate: false
+  xy: 1916, 606
+  size: 443, 603
+  orig: 623, 620
+  offset: 106, 0
+  index: 3
+Pouki_An_Jump_v02
+  rotate: false
+  xy: 1035, 1213
+  size: 443, 603
+  orig: 623, 620
+  offset: 106, 0
+  index: 4
+Pouki_An_Jump_v02
+  rotate: false
+  xy: 1480, 1213
+  size: 452, 550
+  orig: 623, 620
+  offset: 99, 0
+  index: 5
+Pouki_An_Jump_v02
+  rotate: false
+  xy: 1480, 1213
+  size: 452, 550
+  orig: 623, 620
+  offset: 99, 0
+  index: 6
+Pouki_An_Jump_v02
+  rotate: false
+  xy: 1, 1815
+  size: 469, 461
+  orig: 623, 620
+  offset: 89, 0
+  index: 7
+Pouki_An_Jump_v02
+  rotate: false
+  xy: 1, 1815
+  size: 469, 461
+  orig: 623, 620
+  offset: 89, 0
+  index: 8
+Pouki_An_Jump_v02
+  rotate: false
+  xy: 999, 606
+  size: 454, 603
+  orig: 623, 620
+  offset: 95, 0
+  index: 9
+Pouki_An_Jump_v02
+  rotate: false
+  xy: 1, 1210
+  size: 515, 603
+  orig: 623, 620
+  offset: 34, 0
+  index: 10
+Pouki_An_Jump_v02
+  rotate: false
+  xy: 1055, 1
+  size: 515, 603
+  orig: 623, 620
+  offset: 34, 0
+  index: 11
+Pouki_An_Jump_v02
+  rotate: false
+  xy: 1572, 1
+  size: 515, 603
+  orig: 623, 620
+  offset: 29, 1
+  index: 12
+Pouki_An_Jump_v02
+  rotate: false
+  xy: 518, 1211
+  size: 515, 603
+  orig: 623, 620
+  offset: 22, 4
+  index: 13
+Pouki_An_Jump_v02
+  rotate: false
+  xy: 1, 602
+  size: 515, 606
+  orig: 623, 620
+  offset: 22, 1
+  index: 14
+Pouki_An_Jump_v02
+  rotate: false
+  xy: 528, 1
+  size: 525, 595
+  orig: 623, 620
+  offset: 0, 7
+  index: 15
+Pouki_An_Jump_v02
+  rotate: false
+  xy: 1, 1
+  size: 525, 599
+  orig: 623, 620
+  offset: 0, 3
+  index: 16
