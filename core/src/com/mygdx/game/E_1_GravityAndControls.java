@@ -33,14 +33,14 @@ public class E_1_GravityAndControls extends ApplicationAdapter implements InputP
     Matrix4 debugMatrix;
     OrthographicCamera camera;
     
-    
     float torque = 0.0f;
     boolean drawSprite = true;
     
     final float PIXELS_TO_METERS = 100f;
 
     @Override
-    public void create() {
+    public void create() 
+    {
 
         batch = new SpriteBatch();
         img = new Texture("badlogic.jpg");
@@ -52,15 +52,16 @@ public class E_1_GravityAndControls extends ApplicationAdapter implements InputP
         
         BodyDef bodyDef = new BodyDef();
         bodyDef.type = BodyDef.BodyType.DynamicBody;
-        bodyDef.position.set((sprite.getX() + sprite.getWidth()/2) / 
-                             PIXELS_TO_METERS, 
+        bodyDef.position.set(
+        		(sprite.getX() + sprite.getWidth()/2) / PIXELS_TO_METERS, 
                 (sprite.getY() + sprite.getHeight()/2) / PIXELS_TO_METERS);
 
         body = world.createBody(bodyDef);
 
         PolygonShape shape = new PolygonShape();
-        shape.setAsBox(sprite.getWidth()/2 / PIXELS_TO_METERS, sprite.getHeight()
-                       /2 / PIXELS_TO_METERS);
+        shape.setAsBox(
+        		sprite.getWidth()/2 / PIXELS_TO_METERS, 
+        		sprite.getHeight()/2 / PIXELS_TO_METERS);
 
         FixtureDef fixtureDef = new FixtureDef();
         fixtureDef.shape = shape;
@@ -77,6 +78,7 @@ public class E_1_GravityAndControls extends ApplicationAdapter implements InputP
     }
 
     private float elapsed = 0;
+    
     @Override
     public void render() 
     {

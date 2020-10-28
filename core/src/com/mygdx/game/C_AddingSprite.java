@@ -19,14 +19,16 @@ public class C_AddingSprite extends ApplicationAdapter
 	public static void main (String[] arg) 
 	{
 		LwjglApplicationConfiguration config = new LwjglApplicationConfiguration();
+		config.width = 1000;
+		config.height = 700;
 		new LwjglApplication(new C_AddingSprite(), config);
 	}
 	
 	
-	public Animation<TextureRegion> currentState ;
+	public Animation<TextureRegion> currentAnimaton ;
 	public TextureRegion currentFrame ; 
-	SpriteBatch batch;
 	
+	SpriteBatch batch;
 	float stateTime ; 
 	
 	@Override
@@ -36,23 +38,28 @@ public class C_AddingSprite extends ApplicationAdapter
 		
 		TextureAtlas textureAtlas = new TextureAtlas(Gdx.files.internal("jumpAtlas.atlas"));
 		Array<AtlasRegion> regions = textureAtlas.findRegions("Pouki_An_Jump_v02") ;
-		currentState = new Animation(0.030f, regions) ;
-//		currentState = new Animation(0.0130f, regions) ;
+//		currentAnimaton = new Animation(0.030f, regions) ;
+		currentAnimaton = new Animation(0.130f, regions) ;
 		
-		currentState.setPlayMode(PlayMode.LOOP);
+		currentAnimaton.setPlayMode(PlayMode.LOOP);
 	}
 
 	@Override
 	public void render () 
 	{
-		Gdx.gl.glClearColor(1, 0, 0, 1);
 		Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
 				
 		stateTime += Gdx.graphics.getDeltaTime();
-		currentFrame = currentState.getKeyFrame(stateTime, PlayMode.LOOP == currentState.getPlayMode());
+		currentFrame = currentAnimaton.getKeyFrame(stateTime);
 		batch.begin();
 		batch.draw(currentFrame, 0, 0, currentFrame.getRegionWidth(), currentFrame.getRegionHeight()); 
 		batch.end(); 
 	}
 
+	// Texture Packer 
+	// https://www.codeandweb.com/texturepacker
+	// Free Stuff 
+	// https://opengameart.org/
+	
+	
 }

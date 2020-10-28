@@ -8,30 +8,29 @@ import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 
-public class B_FrameRate extends ApplicationAdapter 
-{
-	
-	public static void main (String[] arg) 
-	{
+public class B_FrameRate extends ApplicationAdapter {
+
+	public static void main(String[] arg) {
 		LwjglApplicationConfiguration config = new LwjglApplicationConfiguration();
-//		config.foregroundFPS = 10 ;
+		config.width = 1000;
+		config.height = 700;
+		config.foregroundFPS = 10;
 //		config.foregroundFPS = 30 ;
-		config.foregroundFPS = 60 ;
+		config.foregroundFPS = 60;
 //		config.foregroundFPS = 150 ;
-		
-		config.backgroundFPS = 0 ;
+
+		config.backgroundFPS = 0;
 //		config.backgroundFPS = -1 ;
 		new LwjglApplication(new B_FrameRate(), config);
 	}
-	
+
 	SpriteBatch batch;
 	Texture img;
-	
-	int valueX = 0 ; 
-	
+
+	int valueX = 0;
+
 	@Override
-	public void create () 
-	{
+	public void create() {
 		batch = new SpriteBatch();
 		img = new Texture("badlogic.jpg");
 	}
@@ -40,23 +39,23 @@ public class B_FrameRate extends ApplicationAdapter
 	 *
 	 */
 	@Override
-	public void render () 
-	{
+	public void render() {
 		Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
 		Gdx.graphics.setTitle("My current FrameRate " + Gdx.graphics.getFramesPerSecond());
-		
+
 		batch.begin();
-		
-		
-		valueX++ ; 
-//		valueX += 100 * Gdx.graphics.getDeltaTime(); 
+
+//		valueX++ ; 
+		valueX += 100 * Gdx.graphics.getDeltaTime();
 		batch.draw(img, valueX, 0);
+
+//		System.out.println(Gdx.graphics.getDeltaTime());
+		
 		batch.end();
 	}
-	
+
 	@Override
-	public void dispose () 
-	{
+	public void dispose() {
 		batch.dispose();
 		img.dispose();
 	}
