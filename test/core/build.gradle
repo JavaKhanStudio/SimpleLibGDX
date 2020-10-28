@@ -1,0 +1,16 @@
+sourceCompatibility = 1.7
+[compileJava, compileTestJava]*.options*.encoding = 'UTF-8'
+
+sourceSets 
+{
+    main 
+    {
+        java 
+        {
+            srcDir 'src'
+            srcDir 'assets'     
+        }
+    }
+}
+
+eclipse.project.name = appName + "-core"
